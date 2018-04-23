@@ -40,18 +40,19 @@ import DauTrang from "./screens/menu/DauTrang";
 import KhoanhKhac from "./screens/menu/KhoanhKhac";
 import CaiDatVaRiengTu from "./screens/menu/CaiDatVaRiengTu";
 import TroGiup from "./screens/menu/TroGiup";
+import TaiKhoanMenu from "./screens/menu/TaiKhoanMenu";
 import SideMenu from "./SideMenu";
 
 // screens cai dat va rieng tu
-import GioiThieuTwitter from "../../CaiDatVaRiengTu/screens/GioiThieuTwitter";
-import HienThiVaAmThanh from "../../CaiDatVaRiengTu/screens/HienThiVaAmThanh";
-import KhaNangTruyCap from "../../CaiDatVaRiengTu/screens/KhaNangTruyCap";
-import RiengTuVaBaoMat from "../../CaiDatVaRiengTu/screens/RiengTuVaBaoMat";
-import SuDungDuLieu from "../../CaiDatVaRiengTu/screens/SuDungDuLieu";
-import TaiKhoan from "../../CaiDatVaRiengTu/screens/TaiKhoan";
-import ThongBao from "../../CaiDatVaRiengTu/screens/ThongBao";
-import TuyChonNoiDung from "../../CaiDatVaRiengTu/screens/TuyChonNoiDung";
-import ViTriVaProxy from "../../CaiDatVaRiengTu/screens/ViTriVaProxy";
+import GioiThieuTwitter from "./CaiDatVaRiengTu/screens/GioiThieuTwitter";
+import HienThiVaAmThanh from "./CaiDatVaRiengTu/screens/HienThiVaAmThanh";
+import KhaNangTruyCap from "./CaiDatVaRiengTu/screens/KhaNangTruyCap";
+import RiengTuVaBaoMat from "./CaiDatVaRiengTu/screens/RiengTuVaBaoMat";
+import SuDungDuLieu from "./CaiDatVaRiengTu/screens/SuDungDuLieu";
+import TaiKhoan from "./CaiDatVaRiengTu/screens/TaiKhoan";
+import ThongBao from "./CaiDatVaRiengTu/screens/ThongBao";
+import TuyChonNoiDung from "./CaiDatVaRiengTu/screens/TuyChonNoiDung";
+import ViTriVaProxy from "./CaiDatVaRiengTu/screens/ViTriVaProxy";
 
 // tab man hinh chinh
 const Tabbar = TabNavigator(
@@ -109,14 +110,14 @@ const Tabbar = TabNavigator(
         let iconName;
         if (routeName === "Home") {
           iconName = `ios-home${focused ? "" : "-outline"}`;
-        } else if (routeName === "Notification") {
-          iconName = `ios-notifications${focused ? "" : "-outline"}`;
         } else if (routeName === "Search") {
           iconName = `ios-search${focused ? "" : "-outline"}`;
+        } else if (routeName === "Notification") {
+          iconName = `ios-notifications${focused ? "" : "-outline"}`;
         } else if (routeName === "Message") {
           iconName = `ios-mail${focused ? "" : "-outline"}`;
         }
-        return <Ionicons name={iconName} size={30} color={tintColor} />;
+        return <Ionicons name={iconName} size={25} color={tintColor} />;
       }
     })
   }
@@ -154,6 +155,7 @@ export const LoginStack = StackNavigator({
 export const Drawer = DrawerNavigator(
   {
     Tabbar: { screen: Tabbar },
+    TaiKhoanMenu: { screen: TaiKhoanMenu },
     HoSo: { screen: HoSo },
     DanhSach: { screen: DanhSach },
     DauTrang: { screen: DauTrang },
@@ -163,7 +165,19 @@ export const Drawer = DrawerNavigator(
   },
   {
     initialRouteName: "Tabbar",
-    drawerWidth: 350,
+    drawerWidth: 370,
     contentComponent: props => <SideMenu {...props} />
   }
 );
+
+const CaiDatVaRiengTuStack = StackNavigator({
+  GioiThieuTwitter: { screen: GioiThieuTwitter },
+  HienThiVaAmThanh: { screen: HienThiVaAmThanh },
+  KhaNangTruyCap: { screen: KhaNangTruyCap },
+  RiengTuVaBaoMat: { screen: RiengTuVaBaoMat },
+  SuDungDuLieu: { screen: SuDungDuLieu },
+  TaiKhoan: { screen: TaiKhoan },
+  ThongBao: { screen: ThongBao },
+  TuyChonNoiDung: { screen: TuyChonNoiDung },
+  ViTriVaProxy: { screen: ViTriVaProxy }
+});

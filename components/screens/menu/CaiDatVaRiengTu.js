@@ -1,6 +1,12 @@
 import React, { Component } from "react";
-import { Platform, StyleSheet, Text, View, ScrollView } from "react-native";
-
+import {
+  Platform,
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  ScrollView
+} from "react-native";
 // class change screen
 import ChangeScreen from "../../ChangeScreen";
 
@@ -24,11 +30,20 @@ export default class CaiDatVaRiengTu extends Component {
         />
 
         <Text>Chung</Text>
-        <Text>Hiển thị và âm thanh</Text>
-        <Text>Sử dụng dữ liệu</Text>
-        <Text>Khả năng truy cập</Text>
-        <Text>Vị trí và proxy</Text>
-        <Text>Giới thiệu Twitter</Text>
+        <ChangeScreen
+          textButton="Hiển thị và âm thanh"
+          manHinhDich="HienThiVaAmThanh"
+        />
+        <ChangeScreen textButton="Sử dụng dữ liệu" manHinhDich="SuDungDuLieu" />
+        <ChangeScreen
+          textButton="Khả năng truy cập"
+          manHinhDich="KhaNangTruyCap"
+        />
+        <ChangeScreen textButton="Vị trí và proxy" manHinhDich="ViTriVaProxy" />
+        <ChangeScreen
+          textButton="Giới thiệu Twitter"
+          manHinhDich="GioiThieuTwitter"
+        />
       </ScrollView>
     );
   }
