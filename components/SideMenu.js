@@ -7,16 +7,24 @@ export default class SideMenu extends Component {
   }
   render() {
     return (
-      <View style={{ flex: 1 }}>
+      <View>
+        {/* <Text>Hồ sơ</Text>
+        <Text>Danh sách</Text>
+        <Text>Dấu trang</Text>
+        <Text>Khoảnh khắc</Text>
+        <Text>Cài đặt và riêng tư</Text>
+        <Text>Trung tâm trợ giúp</Text> */}
         <View>
-          <TouchableOpacity onPress={this.props.navigation.navigate("HoSo")}>
+          <TouchableOpacity
+            onPress={() => this.props.navigation.navigate("HoSo")}
+          >
             <Text>Hồ sơ</Text>
           </TouchableOpacity>
         </View>
 
         <View>
           <TouchableOpacity
-            onPress={this.props.navigation.navigate("DanhSach")}
+            onPress={() => this.props.navigation.navigate("DanhSach")}
           >
             <Text>Danh sách</Text>
           </TouchableOpacity>
@@ -24,7 +32,7 @@ export default class SideMenu extends Component {
 
         <View>
           <TouchableOpacity
-            onPress={this.props.navigation.navigate("DauTrang")}
+            onPress={() => this.props.navigation.navigate("DauTrang")}
           >
             <Text>Dấu trang</Text>
           </TouchableOpacity>
@@ -32,7 +40,7 @@ export default class SideMenu extends Component {
 
         <View>
           <TouchableOpacity
-            onPress={this.props.navigation.navigate("KhoanhKhac")}
+            onPress={() => this.props.navigation.navigate("KhoanhKhac")}
           >
             <Text>Khoảnh khắc</Text>
           </TouchableOpacity>
@@ -40,14 +48,16 @@ export default class SideMenu extends Component {
 
         <View>
           <TouchableOpacity
-            onPress={this.props.navigation.navigate("CaiDatVaRiengTu")}
+            onPress={() => this.props.navigation.navigate("CaiDatVaRiengTu")}
           >
             <Text>Cài đặt và riêng tư</Text>
           </TouchableOpacity>
         </View>
 
         <View>
-          <TouchableOpacity onPress={this.props.navigation.navigate("TroGiup")}>
+          <TouchableOpacity
+            onPress={() => this.props.navigation.navigate("TroGiup")}
+          >
             <Text>Trung tâm Trợ giúp</Text>
           </TouchableOpacity>
         </View>

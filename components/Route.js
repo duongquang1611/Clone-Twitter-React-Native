@@ -33,13 +33,25 @@ import Notification from "./screens/Notification";
 import Search from "./screens/Search";
 
 //screen menu
+
+import HoSo from "./screens/menu/HoSo";
+import DanhSach from "./screens/menu/DanhSach";
+import DauTrang from "./screens/menu/DauTrang";
+import KhoanhKhac from "./screens/menu/KhoanhKhac";
+import CaiDatVaRiengTu from "./screens/menu/CaiDatVaRiengTu";
+import TroGiup from "./screens/menu/TroGiup";
 import SideMenu from "./SideMenu";
-import HoSo from "./screens/HoSo";
-import DanhSach from "./screens/DanhSach";
-import DauTrang from "./screens/DauTrang";
-import KhoanhKhac from "./screens/KhoanhKhac";
-import CaiDatVaRiengTu from "./screens/CaiDatVaRiengTu";
-import TroGiup from "./screens/TroGiup";
+
+// screens cai dat va rieng tu
+import GioiThieuTwitter from "../../CaiDatVaRiengTu/screens/GioiThieuTwitter";
+import HienThiVaAmThanh from "../../CaiDatVaRiengTu/screens/HienThiVaAmThanh";
+import KhaNangTruyCap from "../../CaiDatVaRiengTu/screens/KhaNangTruyCap";
+import RiengTuVaBaoMat from "../../CaiDatVaRiengTu/screens/RiengTuVaBaoMat";
+import SuDungDuLieu from "../../CaiDatVaRiengTu/screens/SuDungDuLieu";
+import TaiKhoan from "../../CaiDatVaRiengTu/screens/TaiKhoan";
+import ThongBao from "../../CaiDatVaRiengTu/screens/ThongBao";
+import TuyChonNoiDung from "../../CaiDatVaRiengTu/screens/TuyChonNoiDung";
+import ViTriVaProxy from "../../CaiDatVaRiengTu/screens/ViTriVaProxy";
 
 // tab man hinh chinh
 const Tabbar = TabNavigator(
@@ -142,7 +154,6 @@ export const LoginStack = StackNavigator({
 export const Drawer = DrawerNavigator(
   {
     Tabbar: { screen: Tabbar },
-    Home: { screen: Home },
     HoSo: { screen: HoSo },
     DanhSach: { screen: DanhSach },
     DauTrang: { screen: DauTrang },

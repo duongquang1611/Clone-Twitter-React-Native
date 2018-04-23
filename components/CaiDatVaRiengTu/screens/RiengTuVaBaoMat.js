@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { Platform, StyleSheet, Text, View } from "react-native";
 
-export default class CaiDatVaRiengTu extends Component {
+export default class RiengTuVaBaoMat extends Component {
   render() {
     return (
       <View>
-        <Text> CaiDat</Text>
+        <Text> RiengTuVaBaoMat</Text>
       </View>
     );
   }
