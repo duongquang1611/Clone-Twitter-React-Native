@@ -1,0 +1,3 @@
+rootProject.name = 'cloneTwitter'
+
+include ':app'
