@@ -127,39 +127,46 @@ const Tabbar = TabNavigator(
 );
 
 //man hinh login
-export const LoginStack = StackNavigator({
-  manHinh_SignUp: {
-    screen: SignUp,
+export const LoginStack = StackNavigator(
+  {
+    manHinh_SignUp: {
+      screen: SignUp,
 
-    navigationOptions: {
-      header: null
+      navigationOptions: {
+        header: null
+      }
+    },
+    manHinh_SignUp2: {
+      screen: SignUp2,
+      navigationOptions: {
+        headerTitle: <SignUpTitle />
+      }
+    },
+    manHinh_Login: {
+      screen: Login,
+      navigationOptions: {
+        headerTitle: <LogoTitle />
+      }
+    },
+    Tabbar: {
+      screen: Tabbar
     }
   },
-  manHinh_SignUp2: {
-    screen: SignUp2,
-    navigationOptions: {
-      headerTitle: <SignUpTitle />
-    }
-  },
-  manHinh_Login: {
-    screen: Login,
-    navigationOptions: {
-      headerTitle: <LogoTitle />
-    }
-  },
-  Tabbar: {
-    screen: Tabbar
+  {
+    initialRouteName: "manHinh_SignUp"
   }
-});
+);
 
 // export const myDrawer = StackNavigator({
 //   myDrawer: { screen: Drawer }
 // });
 export const Drawer = DrawerNavigator(
   {
+    Login: { screen: LoginStack },
     Tabbar: { screen: Tabbar },
     TaiKhoanMenu: { screen: TaiKhoanMenu },
     HoSo: { screen: HoSo },
+    SideMenu: { screen: SideMenu },
     DanhSach: { screen: DanhSach },
     DauTrang: { screen: DauTrang },
     KhoanhKhac: { screen: KhoanhKhac },
@@ -167,9 +174,10 @@ export const Drawer = DrawerNavigator(
     TroGiup: { screen: TroGiup }
   },
   {
-    initialRouteName: "Tabbar",
+    initialRouteName: "Login",
+    // initialRouteName: "LoginStack",
     drawerWidth: 370,
-    contentComponent: props => <SideMenu {...props} />
+    contentComponent: SideMenu
   }
 );
 
