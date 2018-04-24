@@ -97,8 +97,10 @@ const Tabbar = TabNavigator(
   {
     initialRouteName: "Home",
     swipeEnabled: false,
+    // showLabel: false,
     tabBarOptions: {
       activeTintColor: color.blue,
+      showIcon: true,
       inactiveTintColor: color.darkGray,
       style: {
         backgroundColor: color.white
@@ -106,6 +108,7 @@ const Tabbar = TabNavigator(
     },
     navigationOptions: ({ navigation }) => ({
       tabBarIcon: ({ focused, tintColor }) => {
+        // lỗi k set được  icon..???
         const { routeName } = navigation.state;
         let iconName;
         if (routeName === "Home") {
