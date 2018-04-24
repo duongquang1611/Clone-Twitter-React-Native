@@ -96,11 +96,11 @@ const Tabbar = TabNavigator(
   },
   {
     initialRouteName: "Home",
-    swipeEnabled: false,
-    // showLabel: false,
+    swipeEnabled: true,
     tabBarOptions: {
       activeTintColor: color.blue,
       showIcon: true,
+      showLabel: false,
       inactiveTintColor: color.darkGray,
       style: {
         backgroundColor: color.white
