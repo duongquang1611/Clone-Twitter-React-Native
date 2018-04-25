@@ -22,6 +22,7 @@ import { color } from "./styles/color";
 // custom header
 import LogoTitle from "./screens/LogoTitle";
 import SignUpTitle from "./screens/SignUpTitle";
+import Header from "./styles/Header";
 
 //screens welcome, login
 import Home from "./screens/Home";
@@ -107,6 +108,7 @@ const Tabbar = TabNavigator(
       }
     },
     navigationOptions: ({ navigation }) => ({
+      // header: null,
       tabBarIcon: ({ focused, tintColor }) => {
         // lỗi k set được  icon..???
         const { routeName } = navigation.state;
@@ -160,6 +162,27 @@ export const LoginStack = StackNavigator(
 // export const myDrawer = StackNavigator({
 //   myDrawer: { screen: Drawer }
 // });
+
+const CaiDatVaRiengTuStack = StackNavigator(
+  {
+    CaiDatVaRiengTu: { screen: CaiDatVaRiengTu },
+    GioiThieuTwitter: { screen: GioiThieuTwitter },
+    HienThiVaAmThanh: { screen: HienThiVaAmThanh },
+    KhaNangTruyCap: { screen: KhaNangTruyCap },
+    RiengTuVaBaoMat: { screen: RiengTuVaBaoMat },
+    SuDungDuLieu: { screen: SuDungDuLieu },
+    TaiKhoan: { screen: TaiKhoan },
+    ThongBao: { screen: ThongBao },
+    TuyChonNoiDung: { screen: TuyChonNoiDung },
+    ViTriVaProxy: { screen: ViTriVaProxy }
+  },
+  {
+    initialRouteName: "CaiDatVaRiengTu",
+    navigationOptions: {
+      header: null
+    }
+  }
+);
 export const Drawer = DrawerNavigator(
   {
     Login: { screen: LoginStack },
@@ -170,25 +193,14 @@ export const Drawer = DrawerNavigator(
     DanhSach: { screen: DanhSach },
     DauTrang: { screen: DauTrang },
     KhoanhKhac: { screen: KhoanhKhac },
-    CaiDatVaRiengTu: { screen: CaiDatVaRiengTu },
+    CaiDatVaRiengTu: { screen: CaiDatVaRiengTuStack },
     TroGiup: { screen: TroGiup }
   },
   {
+    // drawerLabel: true,
     initialRouteName: "Login",
     // initialRouteName: "LoginStack",
     drawerWidth: 370,
     contentComponent: SideMenu
   }
 );
-
-const CaiDatVaRiengTuStack = StackNavigator({
-  GioiThieuTwitter: { screen: GioiThieuTwitter },
-  HienThiVaAmThanh: { screen: HienThiVaAmThanh },
-  KhaNangTruyCap: { screen: KhaNangTruyCap },
-  RiengTuVaBaoMat: { screen: RiengTuVaBaoMat },
-  SuDungDuLieu: { screen: SuDungDuLieu },
-  TaiKhoan: { screen: TaiKhoan },
-  ThongBao: { screen: ThongBao },
-  TuyChonNoiDung: { screen: TuyChonNoiDung },
-  ViTriVaProxy: { screen: ViTriVaProxy }
-});
