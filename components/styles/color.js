@@ -9,6 +9,6 @@ const color = {
   white: "#ffffff",
   // boldText: 75,
   fontText: "Roman",
-  textSize: 55
+  textSize: 40
 };
 export { color };

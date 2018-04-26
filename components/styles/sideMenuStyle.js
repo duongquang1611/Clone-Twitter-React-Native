@@ -5,31 +5,30 @@ export const styles = StyleSheet.create({
   baseText: {
     color: "black",
     marginTop: 10,
-    fontSize: 35,
+    fontSize: 20,
     fontFamily: color.fontText
   },
   baseText1: {
     color: "black",
-    fontSize: 35,
+    fontSize: 20,
     fontFamily: color.fontText,
-    marginLeft: 20
+    marginLeft: 5
   },
   nameText: {
     color: "black",
-    fontSize: 40,
+    fontSize: 30,
     fontWeight: "bold",
     fontFamily: color.fontText
   },
   smallText: {
     fontFamily: color.fontText,
     color: color.drakGray,
-    fontSize: 25
+    fontSize: 18
   },
   avatar: {
-    width: 70,
-    height: 70,
-    marginTop: 20,
-    borderRadius: 35
+    width: 60,
+    height: 60,
+    borderRadius: 30
   },
   viewAllMenu: {
     flex: 1,
@@ -45,7 +44,7 @@ export const styles = StyleSheet.create({
     flexDirection: "row"
   },
   textFollow: {
-    fontSize: 18,
+    fontSize: 14,
     color: color.darkGray,
     marginRight: 5
   },
@@ -58,7 +57,7 @@ export const styles = StyleSheet.create({
   },
   viewSmallMenu: {
     flex: 4,
-    padding: 20,
+    padding: 10,
     marginTop: 0.5,
     justifyContent: "center",
     backgroundColor: color.white
@@ -72,7 +71,7 @@ export const styles = StyleSheet.create({
   },
   viewScanner: {
     flex: 1,
-    padding: 20,
+    // padding: 20,
     marginTop: 0.5,
     flexDirection: "row",
     backgroundColor: color.white
@@ -81,5 +80,5 @@ export const styles = StyleSheet.create({
   //     backgroundColor: color.darkGray,
   //     height: 1
   //   }
-  icon: { flexDirection: "row", marginRight: 10 }
+  icon: { flexDirection: "row", marginLeft: 5 }
 });

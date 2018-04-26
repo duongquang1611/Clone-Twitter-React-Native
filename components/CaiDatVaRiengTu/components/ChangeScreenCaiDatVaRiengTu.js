@@ -15,7 +15,7 @@ export default class ChangeScreen extends Component {
   }
   render() {
     return (
-      <View style={({ flex: 1 }, styles.viewMain)}>
+      <View style={({ flex: 1, flexDirection: "column" }, styles.viewMain)}>
         <View style={{ flex: 99 }}>
           <TouchableOpacity
             onPress={() => this.props.navigate(this.props.manHinhDich)}
@@ -23,7 +23,7 @@ export default class ChangeScreen extends Component {
             <Text style={styles.baseText}>{this.props.textButton}</Text>
           </TouchableOpacity>
         </View>
-        <View style={{ flex: 1, backgroundColor: color.black }} />
+        {/* <View style={{ flex: 88, backgroundColor: "black" }} /> */}
       </View>
     );
   }

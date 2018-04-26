@@ -30,7 +30,7 @@ export default class Header extends React.Component {
               <Ionicons
                 name={this.props.iconName}
                 color={this.props.iconColor}
-                size={35}
+                size={30}
               />
             </TouchableOpacity>
           </View>
@@ -38,7 +38,7 @@ export default class Header extends React.Component {
             <Text
               style={{
                 color: "black",
-                fontSize: 30,
+                fontSize: 25,
                 fontFamily: color.fontText
               }}
             >

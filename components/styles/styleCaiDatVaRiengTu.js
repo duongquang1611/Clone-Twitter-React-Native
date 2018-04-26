@@ -12,19 +12,22 @@ export const styles = StyleSheet.create({
     backgroundColor: "white"
   },
   baseText: {
-    fontSize: 27,
+    fontSize: 20,
     color: "black",
     fontFamily: color.fontText,
-    margin: 10
+    margin: 15,
+    marginRight: 20
   },
   titleText: {
-    fontSize: 30,
+    fontSize: 23,
     color: color.darkGray,
     fontWeight: "bold",
-    margin: 10
+    margin: 15,
+    marginRight: 20
   },
   viewTitle: {
+    justifyContent: "center",
     backgroundColor: color.extraLightGray,
-    height: 60
+    height: 55
   }
 });

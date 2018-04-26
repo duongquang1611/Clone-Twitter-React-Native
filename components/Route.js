@@ -200,7 +200,7 @@ export const Drawer = DrawerNavigator(
     // drawerLabel: true,
     initialRouteName: "Login",
     // initialRouteName: "LoginStack",
-    drawerWidth: 370,
+    drawerWidth: 350,
     contentComponent: SideMenu
   }
 );

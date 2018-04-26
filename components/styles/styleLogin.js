@@ -8,14 +8,14 @@ const styleLogin = StyleSheet.create({
   },
   loginTextTitle: {
     fontWeight: "bold",
-    fontSize: color.textSize,
+    fontSize: 35,
     color: color.black,
     fontFamily: color.fontText,
     margin: 10
   },
   loginTextHint: {
     color: color.darkGray,
-    fontSize: 20,
+    fontSize: 18,
     marginTop: 10,
     marginLeft: 10
   },

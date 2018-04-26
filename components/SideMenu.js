@@ -15,8 +15,12 @@ export default class SideMenu extends Component {
           <Text style={styles.nameText}>Duong Quang</Text>
           <Text style={styles.smallText}>@duongquang1611</Text>
           <View style={styles.viewFollow}>
-            <Text style={styles.textFollow}>890 Đang theo dõi</Text>
-            <Text style={styles.textFollow}>400 Người theo dõi</Text>
+            <View style={{ flex: 6 }}>
+              <Text style={styles.textFollow}>890 Đang theo dõi</Text>
+            </View>
+            <View style={{ flex: 6 }}>
+              <Text style={styles.textFollow}>400 Người theo dõi</Text>
+            </View>
           </View>
           {/* <View style={styles.keNgang} /> */}
         </View>
@@ -25,12 +29,16 @@ export default class SideMenu extends Component {
             onPress={() => this.props.navigation.navigate("HoSo")}
           >
             <View style={styles.icon}>
-              <Ionicons
-                name="ios-person-outline"
-                size={48}
-                color={color.darkGray}
-              />
-              <Text style={styles.baseText1}>Hồ sơ</Text>
+              <View style={{ flex: 2, marginLeft: 10 }}>
+                <Ionicons
+                  name="ios-person-outline"
+                  size={35}
+                  color={color.darkGray}
+                />
+              </View>
+              <View style={{ flex: 8 }}>
+                <Text style={styles.baseText1}>Hồ sơ</Text>
+              </View>
             </View>
           </TouchableOpacity>
 
@@ -38,12 +46,16 @@ export default class SideMenu extends Component {
             onPress={() => this.props.navigation.navigate("DanhSach")}
           >
             <View style={styles.icon}>
-              <Ionicons
-                name="ios-list-box-outline"
-                size={40}
-                color={color.darkGray}
-              />
-              <Text style={styles.baseText1}>Danh sách</Text>
+              <View style={{ flex: 2, marginLeft: 10 }}>
+                <Ionicons
+                  name="ios-list-box-outline"
+                  size={35}
+                  color={color.darkGray}
+                />
+              </View>
+              <View style={{ flex: 8 }}>
+                <Text style={styles.baseText1}>Danh sách</Text>
+              </View>
             </View>
           </TouchableOpacity>
 
@@ -51,12 +63,16 @@ export default class SideMenu extends Component {
             onPress={() => this.props.navigation.navigate("DauTrang")}
           >
             <View style={styles.icon}>
-              <Ionicons
-                name="ios-bookmark-outline"
-                size={55}
-                color={color.darkGray}
-              />
-              <Text style={styles.baseText1}>Dấu trang</Text>
+              <View style={{ flex: 2, marginLeft: 10 }}>
+                <Ionicons
+                  name="ios-bookmark-outline"
+                  size={35}
+                  color={color.darkGray}
+                />
+              </View>
+              <View style={{ flex: 8 }}>
+                <Text style={styles.baseText1}>Dấu trang</Text>
+              </View>
             </View>
           </TouchableOpacity>
 
@@ -64,12 +80,16 @@ export default class SideMenu extends Component {
             onPress={() => this.props.navigation.navigate("KhoanhKhac")}
           >
             <View style={styles.icon}>
-              <Ionicons
-                name="ios-flash-outline"
-                size={57}
-                color={color.darkGray}
-              />
-              <Text style={styles.baseText1}>Khoảnh khắc</Text>
+              <View style={{ flex: 2, marginLeft: 10 }}>
+                <Ionicons
+                  name="ios-flash-outline"
+                  size={35}
+                  color={color.darkGray}
+                />
+              </View>
+              <View style={{ flex: 8 }}>
+                <Text style={styles.baseText1}>Khoảnh khắc</Text>
+              </View>
             </View>
           </TouchableOpacity>
         </View>
@@ -88,18 +108,16 @@ export default class SideMenu extends Component {
           </TouchableOpacity>
         </View>
         <View style={styles.viewScanner}>
-          <View style={{ flex: 5, justifyContent: "flex-start" }}>
-            <Ionicons
-              name="ios-moon-outline"
-              size={55}
-              color={color.darkGray}
-            />
+          <View
+            style={{ flex: 5, justifyContent: "flex-start", marginLeft: 20 }}
+          >
+            <Ionicons name="ios-moon-outline" size={35} color={color.blue} />
           </View>
-          <View style={{ flex: 5, alignItems: "flex-end" }}>
+          <View style={{ flex: 5, alignItems: "flex-end", marginRight: 20 }}>
             <Ionicons
               name="ios-qr-scanner-outline"
-              size={55}
-              color={color.darkGray}
+              size={35}
+              color={color.blue}
             />
           </View>
         </View>
