@@ -19,7 +19,7 @@ export const styles = StyleSheet.create({
     marginRight: 20
   },
   titleText: {
-    fontSize: 23,
+    fontSize: 20,
     color: color.darkGray,
     fontWeight: "bold",
     margin: 15,

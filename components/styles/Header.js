@@ -38,7 +38,7 @@ export default class Header extends React.Component {
             <Text
               style={{
                 color: "black",
-                fontSize: 25,
+                fontSize: 22,
                 fontFamily: color.fontText
               }}
             >

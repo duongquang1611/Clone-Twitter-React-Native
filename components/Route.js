@@ -56,7 +56,7 @@ import TuyChonNoiDung from "./CaiDatVaRiengTu/screens/TuyChonNoiDung";
 import ViTriVaProxy from "./CaiDatVaRiengTu/screens/ViTriVaProxy";
 
 // tab man hinh chinh
-const Tabbar = TabNavigator(
+export const Tabbar = TabNavigator(
   {
     Home: {
       screen: Home,
@@ -110,7 +110,6 @@ const Tabbar = TabNavigator(
     navigationOptions: ({ navigation }) => ({
       // header: null,
       tabBarIcon: ({ focused, tintColor }) => {
-        // lỗi k set được  icon..???
         const { routeName } = navigation.state;
         let iconName;
         if (routeName === "Home") {
